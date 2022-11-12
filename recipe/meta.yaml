@@ -1,16 +1,12 @@
-{% set name = "sphinx-sitemap" %}
 {% set version = "2.2.1" %}
 
 package:
-  name: {{ name }}
+  name: sphinx-sitemap
   version: {{ version }}
 
 source:
-  - url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/sphinx-sitemap-{{ version }}.tar.gz
-    sha256: f1f2149c8013b6d68cc48e6b5bd90f088658cd4584c0220224e72ca85d07b92b
-  # TODO: remove after https://github.com/jdillard/sphinx-sitemap/pull/27
-  - url: https://raw.githubusercontent.com/jdillard/sphinx-sitemap/v{{ version }}/LICENSE
-    sha256: 7ea291972ec8053689519c837036523e0b18f8b5d148bc4fab77ffdaf09c2da1
+  url: https://pypi.io/packages/source/s/sphinx-sitemap/sphinx-sitemap-{{ version }}.tar.gz
+  sha256: f1f2149c8013b6d68cc48e6b5bd90f088658cd4584c0220224e72ca85d07b92b
 
 build:
   number: 0
@@ -32,8 +28,6 @@ test:
   commands:
     - pip check
   requires:
-    # TODO: remove if merged: https://github.com/conda-forge/sphinx-feedstock/pull/85
-    - colorama
     - pip
 
 about:
