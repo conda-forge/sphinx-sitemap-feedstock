@@ -9,6 +9,8 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/sphinx-sitemap-
 
 Summary: Sitemap generator for Sphinx
 
+Documentation: https://sphinx-sitemap.readthedocs.io
+
 Current build status
 ====================
 
