@@ -1,4 +1,4 @@
-{% set version = "2.5.0" %}
+{% set version = "2.5.1" %}
 
 package:
   name: sphinx-sitemap
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/s/sphinx-sitemap/sphinx-sitemap-{{ version }}.tar.gz
-  sha256: 95101f622d0d594161720cbe92a39d353efae9382f7f3563f06d150b1146fef6
+  sha256: 984bef068bbdbc26cfae209a8b61392e9681abc9191b477cd30da406e3a60ee5
 
 build:
   number: 0
