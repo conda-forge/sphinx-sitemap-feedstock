@@ -5,20 +5,20 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/s/sphinx-sitemap/sphinx_sitemap-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/s/sphinx-sitemap/sphinx_sitemap-{{ version }}.tar.gz
   sha256: 5e0c66b9f2e371ede80c659866a9eaad337d46ab02802f9c7e5f7bc5893c28d2
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python {{ python_min }}
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - six
     - sphinx >=1.2
 
@@ -29,6 +29,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/jdillard/sphinx-sitemap
