@@ -1,4 +1,4 @@
-{% set version = "2.6.0" %}
+{% set version = "2.7.1" %}
 
 package:
   name: sphinx-sitemap
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/s/sphinx-sitemap/sphinx_sitemap-{{ version }}.tar.gz
-  sha256: 5e0c66b9f2e371ede80c659866a9eaad337d46ab02802f9c7e5f7bc5893c28d2
+  sha256: 28f02df7062e83628e9782a0d9449658a79c9813217c51db086edc51f20e7bd5
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
 
