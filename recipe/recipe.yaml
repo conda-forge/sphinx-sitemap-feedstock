@@ -9,8 +9,10 @@ package:
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/s/sphinx-sitemap/sphinx_sitemap-${{ version }}.tar.gz
-  sha256: 28f02df7062e83628e9782a0d9449658a79c9813217c51db086edc51f20e7bd5
+  - url: https://pypi.org/packages/source/s/sphinx-sitemap/sphinx_sitemap-${{ version }}.tar.gz
+    sha256: 28f02df7062e83628e9782a0d9449658a79c9813217c51db086edc51f20e7bd5
+    patches:
+      - 0000-no-flask-requests.patch
 
 build:
   number: 0
@@ -25,8 +27,7 @@ requirements:
     - setuptools
   run:
     - python >=${{ python_min }}
-    - six
-    - sphinx >=1.2
+    - sphinx-last-updated-by-git
 
 tests:
   - python:
