@@ -9,7 +9,7 @@ Package license: MIT
 
 Summary: Sitemap generator for Sphinx
 
-Documentation: https://sphinx-sitemap.readthedocs.io
+Documentation: https://sphinx-sitemap.readthedocs.io/
 
 Current build status
 ====================
