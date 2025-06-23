@@ -1,0 +1,48 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/prefix-dev/recipe-format/main/schema.json
+schema_version: 1
+
+context:
+  version: 2.7.1
+
+package:
+  name: sphinx-sitemap
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/s/sphinx-sitemap/sphinx_sitemap-${{ version }}.tar.gz
+  sha256: 28f02df7062e83628e9782a0d9449658a79c9813217c51db086edc51f20e7bd5
+
+build:
+  number: 0
+  noarch: python
+  script:
+    - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
+
+requirements:
+  host:
+    - pip
+    - python ${{ python_min }}.*
+    - setuptools
+  run:
+    - python >=${{ python_min }}
+    - six
+    - sphinx >=1.2
+
+tests:
+  - python:
+      imports: sphinx_sitemap
+      pip_check: true
+      python_version:
+        - ${{ python_min }}.*
+        - 3.13.*
+
+about:
+  summary: Sitemap generator for Sphinx
+  license: MIT
+  license_file: LICENSE
+  homepage: https://github.com/jdillard/sphinx-sitemap
+  documentation: https://sphinx-sitemap.readthedocs.io
+
+extra:
+  recipe-maintainers:
+    - bollwyvl
