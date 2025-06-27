@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: 2.7.1
+  version: "2.7.2"
 
 package:
   name: sphinx-sitemap
@@ -10,7 +10,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/s/sphinx-sitemap/sphinx_sitemap-${{ version }}.tar.gz
-    sha256: 28f02df7062e83628e9782a0d9449658a79c9813217c51db086edc51f20e7bd5
+    sha256: 819e028e27579b47efa0e2f863b87136b711c45f13e84730610e80316f6883da
     patches:
       - 0000-no-flask-requests.patch
 
