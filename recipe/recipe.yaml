@@ -11,8 +11,6 @@ package:
 source:
   - url: https://pypi.org/packages/source/s/sphinx-sitemap/sphinx_sitemap-${{ version }}.tar.gz
     sha256: 819e028e27579b47efa0e2f863b87136b711c45f13e84730610e80316f6883da
-    patches:
-      - 0000-no-flask-requests.patch
 
 build:
   number: 0
